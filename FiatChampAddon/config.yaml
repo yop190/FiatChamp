@@ -42,5 +42,8 @@ schema:
   CarUnknownLocation: str
   StartDelaySeconds: int?
 arch:
+  - armhf
   - amd64
-  - arm64
+  - armv7
+  - i386
+  - aarch64
