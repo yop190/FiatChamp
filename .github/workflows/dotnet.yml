@@ -6,18 +6,21 @@ on:
       - master
       - release
       - fix
-
 jobs:
   build:
     strategy:
       matrix:
         include:
-          - arch: "arm64"
-            rid: "linux-musl-arm64"
-          - arch: "armv7"
-            rid: "linux-musl-arm"
           - arch: "amd64"
-            rid: "linux-musl-x64"
+            rid: "linux-musl-amd64"
+          - arch: "aarch64"
+            rid: "linux-musl-aarch64"
+          - arch: "armv7"
+            rid: "linux-musl-armv7"
+          - arch: "armhf"
+            rid: "linux-musl-armhf"
+          - arch: "i386"
+            rid: "linux-musl-i386"
     runs-on: ubuntu-latest
     permissions: 
       packages: write
